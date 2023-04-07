@@ -9,6 +9,7 @@ ${PM} install -y snapd
 ${PM} install -y fzf
 ${PM} install -y wget
 ${PM} install -y graphviz
+${PM} install -y unzip
 
 
 # docker
@@ -38,6 +39,12 @@ snap install code --classic
 snap install dbeaver-ce
 snap install go --classic
 snap install nvim --classic
+
+# install aws
+curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
+unzip awscliv2.zip
+./aws/install
+
 
 # tools: zsh
 ${PM} install -y zsh
