@@ -36,3 +36,6 @@ rm -rf /etc/apt/keyrings
 
 # remove chrome
 ${PM} remove -y google-chrome-stable
+
+# keep it last
+${PM} -y autoremove
