@@ -9,6 +9,7 @@ snap remove code
 snap remove dbeaver-ce
 snap remove go
 snap remove nvim
+snap remove helm
 
 # removes tools
 ${PM} remove -y git
