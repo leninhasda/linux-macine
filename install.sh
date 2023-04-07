@@ -39,6 +39,7 @@ snap install code --classic
 snap install dbeaver-ce
 snap install go --classic
 snap install nvim --classic
+snap install helm --classic
 
 # install aws
 curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
