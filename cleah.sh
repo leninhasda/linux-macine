@@ -10,6 +10,7 @@ snap remove dbeaver-ce
 snap remove go
 snap remove nvim
 snap remove helm
+snap remove kubectl
 
 # removes tools
 ${PM} remove -y git
