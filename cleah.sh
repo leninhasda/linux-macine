@@ -12,6 +12,10 @@ snap remove nvim
 snap remove helm
 snap remove kubectl
 
+# remove kubenetes helper cli
+rm /usr/local/bin/kns
+rm /usr/local/bin/ktx
+
 # removes tools
 ${PM} remove -y git
 ${PM} remove -y curl
