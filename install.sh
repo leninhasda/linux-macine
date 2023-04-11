@@ -11,7 +11,6 @@ ${PM} install -y wget
 ${PM} install -y graphviz
 ${PM} install -y unzip
 
-
 # docker
 mkdir -m 0755 -p /etc/apt/keyrings
 curl -fsSL https://download.docker.com/linux/debian/gpg | gpg --dearmor -o /etc/apt/keyrings/docker.gpg
@@ -20,10 +19,7 @@ echo \
   "$(. /etc/os-release && echo "$VERSION_CODENAME")" stable" | \
   tee /etc/apt/sources.list.d/docker.list > /dev/null
 ${PM} update
-
 ${PM} install -y docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin docker-compose
-groupadd docker
-usermod -aG docker $USER
 
 # google-chome
 wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
@@ -41,6 +37,7 @@ snap install go --classic
 snap install nvim --classic
 snap install helm --classic
 snap install kubectl --classic
+snap install authy
 
 # install kubernetes helpers
 curl https://raw.githubusercontent.com/blendle/kns/master/bin/kns -o /usr/local/bin/kns && chmod +x $_
