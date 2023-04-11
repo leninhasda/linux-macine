@@ -63,3 +63,4 @@ code --install-extension dougfinke.vscode-pandoc
 code --install-extension zxh404.vscode-proto3
 code --install-extension redhat.vscode-yaml
 code --install-extension hilleer.yaml-plus-json
+code --install-extension rickynormandeau.mariana-pro
