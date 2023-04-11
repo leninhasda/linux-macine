@@ -11,6 +11,7 @@ snap remove go
 snap remove nvim
 snap remove helm
 snap remove kubectl
+snap remove authy
 
 # remove kubenetes helper cli
 rm /usr/local/bin/kns
