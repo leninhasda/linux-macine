@@ -1,0 +1,10 @@
+---
+- hosts: localhost
+  tasks:
+  - name: Install custom package
+    # can't seem to figure out how not to do this without sudo
+    ansible.builtin.shell: >
+      mkdir -p ~/.local/bin
+
+      /bin/sh -c "curl https://raw.githubusercontent.com/blendle/kns/master/bin/kns -o /usr/local/bin/kns && chmod +x $_"
+      /bin/sh -c "curl https://raw.githubusercontent.com/blendle/kns/master/bin/ktx -o /usr/local/bin/ktx && chmod +x $_"

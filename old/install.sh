@@ -5,7 +5,7 @@ ${PM} install -y git
 ${PM} install -y curl
 ${PM} install -y ca-certificates
 ${PM} install -y gnupg
-${PM} install -y snapd 
+${PM} install -y snapd
 ${PM} install -y fzf
 ${PM} install -y wget
 ${PM} install -y graphviz
@@ -25,7 +25,7 @@ ${PM} install -y docker-ce docker-ce-cli containerd.io docker-buildx-plugin dock
 wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
 ${PM} install -y ./google-chrome-stable_current_amd64.deb
 rm ./google-chrome-stable_current_amd64.deb
-	
+
 # install from snap
 snap install alacritty --classic
 snap install slack
@@ -58,7 +58,6 @@ chmod +x zsh-install.sh
 rm ./zsh-install.sh
 
 git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
-
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
 
 # source ~/.zshrc

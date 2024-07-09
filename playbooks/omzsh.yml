@@ -1,0 +1,6 @@
+---
+- hosts: localhost
+  tasks:
+  - name: Configure zsh
+    ansible.builtin.command: ./scripts/omz.sh
+

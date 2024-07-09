@@ -1,0 +1,18 @@
+---
+- hosts: localhost
+  tasks:
+  - name: Install snap packages
+    # can't seem to figure out how not to do this without sudo
+    ansible.builtin.shell: >
+      /bin/sh -c "sudo snap install dbeaver-ce slack 1password"
+
+  - name: Install snap classic packages
+    # you can't specify --classic flag for multiple packages!!!
+    ansible.builtin.shell: |
+      /bin/sh -c "sudo snap install --classic alacritty"
+      /bin/sh -c "sudo snap install --classic tmux"
+      /bin/sh -c "sudo snap install --classic code"
+      /bin/sh -c "sudo snap install --classic go"
+      /bin/sh -c "sudo snap install --classic nvim"
+      /bin/sh -c "sudo snap install --classic helm"
+      /bin/sh -c "sudo snap install --classic kubectl"

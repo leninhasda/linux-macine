@@ -1,0 +1,5 @@
+---
+- hosts: localhost
+  tasks:
+  - name: Install vscode extensions
+    ansible.builtin.command: ./scripts/vscode-ext.sh

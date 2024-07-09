@@ -1,0 +1,12 @@
+---
+- hosts: localhost
+  tasks:
+  - name: Download chrome deb file
+    ansible.builtin.shell: wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+  - name: Install chrome
+    become: true
+    ansible.builtin.apt:
+      deb: google-chrome-stable_current_amd64.deb
+      state: present
+  - name: Remove chrome download
+    ansible.builtin.shell: "rm ./google-chrome-stable_current_amd64.deb"

@@ -1,0 +1,20 @@
+---
+- hosts: localhost
+  tasks:
+  - name: Install apt packages
+    become: true
+    ansible.builtin.apt:
+      name: "{{ item }}"
+      state: present
+      update_cache: true
+    with_items:
+      - curl
+      - ca-certificates
+      - gnupg
+      - snapd
+      - fzf
+      - wget
+      - graphviz
+      - unzip
+      - zsh
+      - jq
